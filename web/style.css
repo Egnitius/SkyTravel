@@ -145,6 +145,7 @@ h2 {
 
 .carousel p {
     text-align: center;
+    font-weight: bold;
 }
 
 .carousel a {
@@ -154,29 +155,6 @@ h2 {
     background-color: #333;
     color: #fff;
     text-decoration: none;
-}
-
-.slider-next,
-.slider-prev {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    font-size: 20px;
-    line-height: 40px;
-    text-align: center;
-    cursor: pointer;
-}
-
-.slider-next {
-    right: 0;
-}
-
-.slider-prev {
-    left: 0;
 }
 
 .carousel img {
