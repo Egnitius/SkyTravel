@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>SkyTravel - Airline Reservation</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1 class="title">Welcome to SkyTravel</h1>
+                <p class="subtitle">Travel the right way.</p>
+
+                <nav class="nav-bar">
+                    <a href="flightstat.html" class="nav-link">Flight Status</a>
+                    <a href="#" class="nav-link">Contact Us</a>
+                    <!--<a href="#" class="nav-link">Profile</a>-->
+                    <a href="login.html" class="nav-link">Login</a>
+                </nav>
+            </header>
+
+            <div class="content">
+                <h2>Book Your Flight</h2>
+                <p>Use our user-friendly interface to search and book flights to your desired destinations. We offer a wide range of airlines and flight options to suit your preferences.</p>
+
+                <form class="booking-form" action="#" method="post">
+                    <div>
+                        <label for="departure">Departure:</label>
+                        <input type="text" id="departure" name="departure" placeholder="Enter departure city" required>
+                    </div>
+                    <div>
+                        <label for="destination">Destination:</label>
+                        <input type="text" id="destination" name="destination" placeholder="Enter destination city" required>
+                    </div>
+                    <div>
+                        <label for="departure-date">Departure Date:</label>
+                        <input type="date" id="departure-date" name="departure-date" required>
+                    </div>
+                    <div>
+                        <label for="return-date">Return Date:</label>
+                        <input type="date" id="return-date" name="return-date" required>
+                    </div>
+                    <div>
+                        <label for="passengers">Passengers:</label>
+                        <select id="passengers" name="passengers" required>
+                            <option value="">Select number of passengers</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <!-- Add more options if needed -->
+                        </select>
+                    </div>
+                    <div>
+                        <input type="submit" value="Search Flights">
+                    </div>
+                </form>
+
+                <h2>Top 10 Destinations in South Africa</h2>
+                <div class="carousel">
+                    <div>
+                        <div class="carousel-image" style="background-image: url('./img/cape_town1.jpg');"></div>
+                        <p>Cape Town</p>
+                    </div>
+                    <div>   
+                        <div class="carousel-image" style="background-image: url('./img/kruger_national_park2.jpg');"></div>
+                        <p>Kruger National Park</p>
+                    </div>
+                    <div>
+                        <div class="carousel-image" style="background-image: url('./img/drakensberg3.jpg');"></div>
+                        <p>Drakensberg</p>
+                    </div>
+                    <div>
+                        <div class="carousel-image" style="background-image: url('./img/garden_route4.jpg');"></div>
+                        <p>Garden Route</p>
+                    </div>
+                    <div>
+                        <div class="carousel-image" style="background-image: url('./img/kgalagadi_transfrontier_park5.jpg');"></div>
+                        <p>Kgalagadi Transfrontier Park</p>
+                    </div>
+                    <div>
+                        <div class="carousel-image" style="background-image: url('./img/durban6.jpg');"></div>
+                        <p>Durban</p>
+                    </div>
+                    <div>
+                        <div class="carousel-image" style="background-image: url('./img/hermanus7.jpg');"></div>
+                        <p>Hermanus</p>
+                    </div>
+                    <div>
+                        <div class="carousel-image" style="background-image: url('./img/addo_elephant_national_park8.jpg');"></div>
+                        <p>Addo Elephant National Park</p>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="./img/cape_winelands9.jpg" alt="package"/>
+                            <div>
+                                <span>R 2 200.00</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    Cape Winelands<br>
+                                    Date : Thursday, Nov 4, 2023<br>
+                                    Person : 3 Adults
+                                </p>
+                                <div>
+                                    <div>
+                                        <a href="#">
+                                            <i class="icon-btn-icon-v2 mr-2"></i> Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <img src="./img/blyde_river_canyon10.jpg" alt="package"/>
+                            <div>
+                                <span>R 2 115.00</span>
+                            </div>
+                        </div>
+                        <div>
+                            <div>
+                                <p>
+                                    Blyde River Canyon<br>
+                                    Date : Thursday, Nov 9, 2023<br>
+                                    Person : 2 Adults
+                                </p>
+                                <div>
+                                    <div>
+                                        <a href="#">
+                                            <i class="icon-btn-icon-v2 mr-2"></i> Book Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer">
+                <div class="container">
+                    <div class="footer-columns">
+                        <div class="footer-column">
+                            <h4 class="footer-column-title">About SkyTravel</h4>
+                            <p class="footer-column-description">
+                                SkyTravel is your one-stop destination for all your airline reservation needs. Whether you're planning a business trip or a vacation, we've got you covered.
+                            </p>
+                        </div>
+                        <div class="footer-column">
+                            <h4 class="footer-column-title">Contact Us</h4>
+                            <ul class="footer-contact-info">
+                                <li><i class="fas fa-map-marker-alt"></i> 123 SkyTravel Street, City, Country</li>
+                                <li><i class="fas fa-phone"></i> +27 26 548 6845</li>
+                                <li><i class="fas fa-envelope"></i> info@skytravel.com</li>
+                            </ul>
+                            <ul class="footer-social-icons">
+                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="footer-column">
+                            <h4 class="footer-column-title">Subscribe</h4>
+                            <form class="footer-subscribe-form">
+                                <input type="email" class="footer-subscribe-input" placeholder="Enter your email address">
+                                <button type="submit" class="footer-subscribe-button">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <p class="footer-text">&copy; 2023 SkyTravel. All rights reserved.</p>
+            </footer>
+        </div>
+
+        <!--        <script>
+                    var swiper = new Swiper('.package-slider', {
+                        slidesPerView: 3,
+                        spaceBetween: 30,
+                        loop: true,
+                        navigation: {
+                            nextEl: '.slider-next',
+                            prevEl: '.slider-prev',
+                        },
+                        autoplay: {
+                            speeds: 2000,
+                            delay: 4000,
+                        },
+                        speed: 1000,
+                        breakpoints: {
+                            991: {
+                                slidesPerView: 2,
+                            },
+                            767: {
+                                slidesPerView: 2,
+                            },
+                            575: {
+                                slidesPerView: 1,
+                            },
+                        }
+                    });
+                </script>-->
+    </body>
+</html>

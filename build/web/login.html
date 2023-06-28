@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>SkyTravel/LogIn</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style-login.css" type="text/css">
+
+    </head>
+    <body>
+        <div class="container">
+            <form class="login-form">
+                <h2>Login</h2>
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username">
+                </div>
+                <div class="form-group">
+                    <label for="logpassword">Password:</label>
+                    <input type="password" id="logpassword" name="password">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Login">
+                    <input type="button" onclick="toggleForm()" value="New User">
+                </div>
+            </form>
+            <form class="register-form" style="display: none;">
+                <h2>Register</h2>
+                <div class="form-group">
+                    <label for="fullname">Full Name:</label>
+                    <input type="text" id="fullname" name="fullname">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="contactno">Contact No:</label>
+                    <input type="text" id="contactno" name="contactno">
+                </div>
+                <div class="form-group">
+                    <label for="regpassword">Password:</label>
+                    <input type="password" id="regpassword" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm-password">Confirm Password:</label>
+                    <input type="password" id="confirm-password" name="confirm-password">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Register">
+                    <input type="button" onclick="toggleForm()" value="Existing User">
+                </div>
+            </form>
+        </div>
+        <script>
+            function toggleForm() {
+                var loginForm = document.querySelector('.login-form');
+                var registerForm = document.querySelector('.register-form');
+
+                if (loginForm.style.display === 'none') {
+                    loginForm.style.display = 'block';
+                    registerForm.style.display = 'none';
+                } else {
+                    loginForm.style.display = 'none';
+                    registerForm.style.display = 'block';
+                }
+            }
+        </script>
+    </body>
+</html>
