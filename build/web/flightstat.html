@@ -4,12 +4,76 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
 <html>
-    <head>
-        <title>SkyTravel/Flight Status</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<head>
+    <title>SkyTravel/Flight Status</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>Flight ID</th>
+        <th>Departure</th>
+        <th>Destination</th>
+        <th>Time</th>
+        <th>Status</th>
+        <th>Baggage</th>
+        <th>Passengers</th>
+    </tr>
+    </thead>
+    <tbody id="flightTableBody">
+    <!-- Table rows will be populated dynamically using JavaScript -->
+    </tbody>
+</table>
+<script>
+    // Function to make an AJAX request to retrieve flight data
+    function getFlightData() {
+        var xhr = new XMLHttpRequest();
+        xhr.open("GET", "FlightDataRetriever", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                var flights = JSON.parse(xhr.responseText);
+                populateTable(flights);
+            }
+        };
+        xhr.send();
+    }
+
+    // Function to populate the table with flight data
+    function populateTable(flights) {
+        var tableBody = document.getElementById("flightTableBody");
+
+        // Iterate over the flights array and create table rows
+        for (var i = 0; i < flights.length; i++) {
+            var flight = flights[i];
+            var row = tableBody.insertRow();
+
+            var flightIdCell = row.insertCell();
+            flightIdCell.innerText = flight.flightsId;
+
+            var departureCell = row.insertCell();
+            departureCell.innerText = flight.departure;
+
+            var destinationCell = row.insertCell();
+            destinationCell.innerText = flight.destination;
+
+            var timeCell = row.insertCell();
+            timeCell.innerText = flight.time;
+
+            var statusCell = row.insertCell();
+            statusCell.innerText = flight.status;
+
+            var baggageCell = row.insertCell();
+            baggageCell.innerText = flight.baggage;
+
+            var passengerCell = row.insertCell();
+            passengerCell.innerText = flight.passengers;
+        }
+    }
+
+    // Call the getFlightData function to retrieve flight data and populate the table
+    getFlightData();
+</script>
+</body>
 </html>

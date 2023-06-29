@@ -4,12 +4,67 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to c
 Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
 -->
 <html>
-    <head>
-        <title>SkyTravel/Profile</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
-        <div>TODO write content</div>
-    </body>
+<head>
+    <title>SkyTravel/Profile</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: skyblue;
+            background-image: url("clouds.jpg");
+            background-repeat: repeat;
+            background-position: center top;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .reservation {
+            margin-bottom: 20px;
+            padding: 10px;
+            background-color: #f5f5f5;
+            border-radius: 5px;
+        }
+
+        .reservation h2 {
+            margin-top: 0;
+            color: #666;
+        }
+
+        .reservation p {
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+                <h1 class="title">Welcome to SkyTravel</h1>
+                <p class="subtitle">Travel the right way.</p>
+
+                <nav class="nav-bar">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="flightstat.html" class="nav-link">Flight Status</a>
+                    <a href="#" class="nav-link">Contact Us</a>
+                    <a href="profile.html" class="nav-link">Profile</a>
+                    <a href="login.html" class="nav-link">Login</a>
+                </nav>
+            </header>
+        <h1>Reservation Details</h1>
+        <div class="reservation">
+            <h2>Flight Reservation</h2>
+            <p>Flight: ABC123</p>
+            <p>Date: June 20, 2023</p>
+            <p>Passenger Name: John Doe</p>
+            <p>Seat: 14A</p>
+        </div>
+    </div>
+</body>
 </html>
+

@@ -8,8 +8,11 @@ Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css
 */
 /* Add custom styles here */
 body {
+    background-color: skyblue;
+    background-image: url("clouds.jpg");
+    background-repeat: repeat;
+    background-position: center top;
     font-family: Arial, sans-serif;
-    background-color: #78bfff; /* Light blue */
     margin: 0;
     padding: 0;
 }
@@ -144,7 +147,7 @@ h2 {
 }
 
 .carousel p {
-    text-align: center;
+    text-align: left;
     font-weight: bold;
 }
 

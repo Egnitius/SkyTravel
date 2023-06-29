@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/Html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Contact Us</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        
+        <style>
+            body {
+                background-color: skyblue;
+                background-image: url("clouds.jpg");
+                background-repeat: repeat;
+                background-position: center top;
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+            }
+
+            h1 {
+                text-align: center;
+                color: #333;
+            }
+
+            form {
+                margin-top: 20px;
+                margin-left: 18%;
+            }
+            
+            form label {
+                font-weight: bold;
+            }
+
+            label {
+                display: block;
+                margin-bottom: 5px;
+                color: #333;
+            }
+
+            input[type="text"],
+            textarea {
+                width: 80%;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+                resize: vertical;
+                margin-top: 1%;
+                margin-bottom: 1%;
+            }
+
+            button[type="submit"] {
+                background-color: #333;
+                color: white;
+                padding: 10px 30px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                margin-left: 8%;
+                margin-top: 2%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <header class="header">
+                <h1 class="title">Welcome to SkyTravel</h1>
+                <p class="subtitle">Travel the right way.</p>
+
+                <nav class="nav-bar">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="flightstat.html" class="nav-link">Flight Status</a>
+                    <a href="#" class="nav-link">Contact Us</a>
+                    <a href="profile.html" class="nav-link">Profile</a>
+                    <a href="login.html" class="nav-link">Login</a>
+                </nav>
+            </header>
+
+            <h1>Contact Us</h1>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+                <label for="email">Email:</label>
+                <input type="text" id="email" name="email" placeholder="Your email" required>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" placeholder="Your message" required></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
+
