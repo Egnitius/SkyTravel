@@ -26,9 +26,7 @@ import com.google.gson.Gson;
 @WebServlet("/FlightDataRetriever")
 public class FlightDataRetriever extends HttpServlet {
 
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/SkyTravel";
-    private static final String DB_USERNAME = "root";
-    private static final String DB_PASSWORD = "12345";
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/?user=root";
 
     private static class Flight {
 
@@ -119,7 +117,7 @@ public class FlightDataRetriever extends HttpServlet {
         try {
             // Establish a database connection
             Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(DB_URL, DB_USERNAME, DB_PASSWORD);
+            connection = DriverManager.getConnection(DB_URL);
 
             // Prepare the SQL statement to retrieve flight data
             String sql = "SELECT * FROM flights";

@@ -53,10 +53,8 @@ public class Logincontroller extends HttpServlet {
         try {
             // Establish a database connection
             Class.forName("com.mysql.cj.jdbc.Driver");
-            String url = "jdbc:mysql://localhost:3306/SkyTravel";
-            String username = "root";
-            String userpass = "12345";
-            connection = DriverManager.getConnection(url, username, userpass);
+            String url = "jdbc:mysql://localhost:3306/?user=root";
+            connection = DriverManager.getConnection(url);
 
             // Prepare the SQL statement to insert the data
             String sql = "INSERT INTO users (fullname, email, contactno, password) VALUES (?, ?, ?, ?)";
